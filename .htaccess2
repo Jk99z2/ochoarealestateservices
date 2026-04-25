@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ochoarealestateservices.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.ochoarealestateservices.com$
+RewriteCond %{REQUEST_URI} !ochoarealestateservices/
+RewriteRule (.*) /ochoarealestateservices/$1 [L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^grupoimperiomanzanillo.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.grupoimperiomanzanillo.com$
+RewriteCond %{REQUEST_URI} !ochoarealestateservices/
+RewriteRule (.*) /grupoimperio/$1 [L]

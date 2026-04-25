@@ -1,0 +1,186 @@
+<!-- El archivo fue probado en Mozilla Firefox, Edge y Lynx -->
+<!DOCTYPE html>
+<html lang="ES">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" >
+      <title>Formulario: Reserva de un hotel en HTML.</title>
+      <link rel="stylesheet" href="actividad4AA.css" id="hoja-estilos-normal">
+      <link rel="stylesheet" href="actividad4AC.css" id="hoja-estilos-alto-contraste" disabled>
+      <script src="actividad4B.js"></script>
+      <script src="https://kit.fontawesome.com/071e3e57e3.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <header>
+         <h1>Hotel XYZ</h1>
+         <nav>
+            <ul>
+               <li><a href="#">Inicio</a></li>
+               <li><a href="#">Habitaciones</a></li>
+               <li><a href="#">Servicios</a></li>
+               <li><a href="#">Contacto</a></li>
+            </ul>
+         </nav>
+      </header>
+      <button id="boton-accesibilidad" onclick="cambioContraste()"><i class="fa-regular fa-eye fa-2xl">.</i></button>
+      <form id="reservahotel" onsubmit="return validarFormulario()">
+         <h1>Formulario: Reserva de una habitación de hotel</h1>
+         <h2>Formulario para los datos personales</h2>
+         <h3 class="text-required text-center">* obligatorio</h3>
+         <div>
+            <label for="nombre" class="text-required">Nombre</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#nombre">(Justificación)</a>
+            <input type="text" name="nombre" id="nombre" placeholder="Ejemplo: Enrique Ochoa Preciado." >
+            <br>
+            <label for="emailu" class="text-required">Email</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#email">(Justificación)</a>
+            <input type="email" name="emailu" id="emailu" placeholder="ejemplo@correo.com" >
+            <br>
+            <label for="password" class="text-required">Contraseña</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#password">(Justificación)</a>
+            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" >
+            <br>
+            <label for="rpassword" class="text-required">Repetir contraseña *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#rpassword">(Justificación)</a>
+            <input type="password" name="rpassword" id="rpassword" placeholder="Repita su contraseña" >
+            <br>
+            <label for="direccion" class="text-required">Dirección *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#direccion">(Justificación)</a>
+            <input type="text" name="direccion" id="direccion" placeholder="Calle Ejemplo #99" >
+            <br>
+            <label for="ciudad" class="text-required">Ciudad *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#ciudad">(Justificación)</a>
+            <input type="text" name="ciudad" id="ciudad" placeholder="Manzanillo" >
+            <br>
+            <label for="provincia" class="text-required">Provincia *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#provincia">(Justificación)</a>
+            <input type="text" name="provincia" id="provincia" placeholder="Colima" >
+            <br>
+         </div>
+         <h2>Huéspedes</h2>
+         <div>
+            <label for="nhuespedes" class="text-required">Número de huéspedes *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#nhuespedes">(Justificación)</a>
+            <input type="number" name="nhuespedes" id="nhuespedes" placeholder="0, 1, 2..." >
+            <br>
+
+            <label for="fechaentrada" class="text-required">Fecha de entrada *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#fechaentrada">(Justificación)</a>
+            <input id="fechaentrada" type="date" name="fechaentrada" min="2023-02-22" >
+            
+            <br>
+            <label for="fechasalida" class="text-required">Fecha de salida *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#fechasalida">(Justificación)</a>
+            <input type="date" name="fechasalida" id="fechasalida" min="2023-02-22" >
+            <br>
+         </div>
+         <div class="center">
+            <h2 class="text-white">Seleccione los servicios</h2>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#servicios">(Justificación)</a></div>
+            <div class="row">
+               <div class="col">
+                  <div class="form-check">
+                     <input type="checkbox" name="aire" id="aire" class="form-check-input" >
+                     <label for="aire" class="text-white form-check-label">Aire Acondicionado</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="almohadas" id="almohadas" class="form-check-input" >
+                     <label for="almohadas" class="text-white form-check-label">Almohadas a la carta</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="cajaf" id="cajaf" class="form-check-input" >
+                     <label for="cajaf" class="text-white form-check-label">Caja fuerte</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="detectorh" id="detectorh" class="form-check-input" >
+                     <label for="detectorh" class="text-white form-check-label">Detector de humos</label>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="form-check">
+                     <input type="checkbox" name="minibar" id="minibar" class="form-check-input" >
+                     <label for="minibar" class="text-white form-check-label">Minibar</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="mesatrab" id="mesatrab" class="form-check-input" >
+                     <label for="mesatrab" class="text-white form-check-label">Mesa de trabajo</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="internet" id="internet" class="form-check-input" >
+                     <label for="internet" class="text-white form-check-label">Conexión a internet</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="wifi" id="wifi" class="form-check-input" >
+                     <label for="wifi" class="text-white form-check-label">WIFI</label>
+                  </div>
+               </div>
+         </div>
+         <div class="center">
+			<fieldset>
+				<legend>Tipo de habitación</legend>
+				<h2 class="text-required">Tipo de habitación *</h2>
+				<a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#thabi">(Justificación)</a><br>
+				<input type="radio" id="individual" name="thabitacion" value="invidualindividual" required>
+				<label class="text-white" for="individual">Individual</label><br>
+				<input type="radio" id="doble" name="thabitacion" value="doble" >
+				<label class="text-white" for="doble">Doble</label><br>
+				<input type="radio" id="Suite" name="thabitacion" value="suite" >
+				<label class="text-white" for="Suite">Suite</label>
+				<br>
+			</fieldset>
+         </div>
+         <div class="center">
+            <h2 class="text-white">Tipo de pensión </h2>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#pension">(Justificación)</a></div>
+            <div class="row">
+               <div class="col">
+                  <div class="form-check">
+                     <input type="checkbox" name="alojamiento" id="alojamiento" class="form-check-input" >
+                     <label for="alojamiento" class="text-white form-check-label">Alojamiento</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="desayuno" id="desayuno" class="form-check-input" >
+                     <label for="desayuno" class="text-white form-check-label">Desayuno</label>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="form-check">
+                     <input type="checkbox" name="media" id="media" class="form-check-input" >
+                     <label for="media" class="text-white form-check-label">Media</label>
+                  </div>
+                  <div class="form-check">
+                     <input type="checkbox" name="completa" id="completa" class="form-check-input" >
+                     <label for="completa" class="text-white form-check-label">Completa</label>
+                  </div>
+               </div>
+         </div>
+         <div class="center">
+            <h2 class="text-white">Comentarios o sugerencias</h2>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#comentario">(Justificación)</a>
+         </div>
+         <div class="center">
+            <label for="comentarios" class="text-required">Comentarios</label>
+            <br>
+            <textarea id="comentarios" class="center" name="comentarios" form="reservahotel"></textarea>
+         </div>
+         <br>
+         <div class="center">
+            <label for="emailc" class="text-required">E-mail contacto *</label>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#email">(Justificación)</a>
+            <input type="email" name="emailc" id="emailc" >
+         </div>
+         <div class="center">
+            <input type="checkbox" name="terminos" id="terminos" >
+            <label for ="terminos" class="text-required">Acepto la política de privacidad *</label><a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#terminos"> (Justificación)</a>
+         </div>
+         <div class="center">
+            <button type="submit" class="btn btn-success">Enviar</button>
+            <a class="text-links" id="enviar" href="file:///home/darkshadowx/Downloads/detalles.html#btnenviar"> (Justificación)</a>
+            <button class="btn btn-danger">Limpiar</button>
+            <a class="text-links" href="file:///home/darkshadowx/Downloads/detalles.html#btnlimpiar"> (Justificación)</a>
+         </div>
+         <br>
+      </form>
+      <!-- Código de verificación del formulario antes de enviarlo con JS-->
+   </body>
+</html>
