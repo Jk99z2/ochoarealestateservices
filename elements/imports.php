@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../css/flaticon.css">
   <link rel="stylesheet" href="../css/icomoon.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="http://ochoarealestateservices.com/images/logochoa.png" type="image/x-icon">
+  <link rel="icon" href="/images/logochoa.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
